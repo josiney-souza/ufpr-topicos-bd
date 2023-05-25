@@ -1,0 +1,8 @@
+EST_DIR_EXT="estatisticas-diretoras-externos.txt"
+EST_DIR_MASC="estatisticas-diretoras-masculinos.txt"
+EST_DIR_HOMO="estatisticas-diretoras-homoafetivos.txt"
+EST_BUR_EXT="estatisticas-burocratas-externos.txt"
+EST_BUR_MASC="estatisticas-burocratas-masculinos.txt"
+EST_BUR_HOMO="estatisticas-burocratas-homoafetivos.txt"
+BASE_TABELA="base-tabela.tex"
+TABELA="tabela.tex"
