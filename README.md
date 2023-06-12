@@ -49,7 +49,8 @@ De maneira geral, dentro do diretório há:
 
 - o script de workflow e seus subscripts (p2-\*, p3-\*, p4-\*, p5-\*)
 - o arquivo de configurações globais `confs.txt`
-- a base da tabela em TEX e o código que a gera no site [Table Generator](https://www.tablesgenerator.com/)
+- a base da tabela em TEX e o código que a gera no site [Tables Generator](https://www.tablesgenerator.com/)
 - o grafo que representa o workflow (editável e imagem)
+- um arquivo PDF da apresentação feita no segundo seminário
 
 OBS.: Outro link interessante são os códigos-fonte da apresentação disponíveis [aqui](https://sharelatex.c3sl.ufpr.br/read/xwfhnnwpgnyj)
