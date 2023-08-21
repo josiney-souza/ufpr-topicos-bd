@@ -8,9 +8,9 @@ cp $BASE_TABELA $TABELA
 SIM=$(grep "SIM" $EST_DIR_EXT | cut -d" " -f4)
 NAO=$(grep "NAO" $EST_DIR_EXT | cut -d" " -f4)
 NSABE=$(grep "NSABE" $EST_DIR_EXT | cut -d" " -f4)
-PSIM=$(echo "scale=1; $SIM*100 / 7" | bc -l)
-PNAO=$(echo "scale=1; $NAO*100 / 7" | bc -l)
-PNSABE=$(echo "scale=1; $NSABE*100 / 7" | bc -l)
+PSIM=$(echo "scale=${ESCALA}; $SIM*100 / 7" | bc -l)
+PNAO=$(echo "scale=${ESCALA}; $NAO*100 / 7" | bc -l)
+PNSABE=$(echo "scale=${ESCALA}; $NSABE*100 / 7" | bc -l)
 sed -i -e "s/PDIR-EXT-SIM/$PSIM/g" \
 	-e "s/PDIR-EXT-NAO/$PNAO/g" \
 	-e "s/PDIR-EXT-NSABE/$PNSABE/g" $TABELA
@@ -21,9 +21,9 @@ sed -i -e "s/DIR-EXT-SIM/$SIM/g" \
 SIM=$(grep "SIM" $EST_DIR_MASC | cut -d" " -f4)
 NAO=$(grep "NAO" $EST_DIR_MASC | cut -d" " -f4)
 NSABE=$(grep "NSABE" $EST_DIR_MASC | cut -d" " -f4)
-PSIM=$(echo "scale=1; $SIM*100 / 7" | bc -l)
-PNAO=$(echo "scale=1; $NAO*100 / 7" | bc -l)
-PNSABE=$(echo "scale=1; $NSABE*100 / 7" | bc -l)
+PSIM=$(echo "scale=${ESCALA}; $SIM*100 / 7" | bc -l)
+PNAO=$(echo "scale=${ESCALA}; $NAO*100 / 7" | bc -l)
+PNSABE=$(echo "scale=${ESCALA}; $NSABE*100 / 7" | bc -l)
 sed -i -e "s/PDIR-MASC-SIM/$PSIM/g" \
 	-e "s/PDIR-MASC-NAO/$PNAO/g" \
 	-e "s/PDIR-MASC-NSABE/$PNSABE/g" $TABELA
@@ -34,9 +34,9 @@ sed -i -e "s/DIR-MASC-SIM/$SIM/g" \
 SIM=$(grep "SIM" $EST_DIR_HOMO | cut -d" " -f4)
 NAO=$(grep "NAO" $EST_DIR_HOMO | cut -d" " -f4)
 NSABE=$(grep "NSABE" $EST_DIR_HOMO | cut -d" " -f4)
-PSIM=$(echo "scale=1; $SIM*100 / 7" | bc -l)
-PNAO=$(echo "scale=1; $NAO*100 / 7" | bc -l)
-PNSABE=$(echo "scale=1; $NSABE*100 / 7" | bc -l)
+PSIM=$(echo "scale=${ESCALA}; $SIM*100 / 7" | bc -l)
+PNAO=$(echo "scale=${ESCALA}; $NAO*100 / 7" | bc -l)
+PNSABE=$(echo "scale=${ESCALA}; $NSABE*100 / 7" | bc -l)
 sed -i -e "s/PDIR-HOMO-SIM/$PSIM/g" \
 	-e "s/PDIR-HOMO-NAO/$PNAO/g" \
 	-e "s/PDIR-HOMO-NSABE/$PNSABE/g" $TABELA
@@ -48,9 +48,9 @@ sed -i -e "s/DIR-HOMO-SIM/$SIM/g" \
 SIM=$(grep "SIM" $EST_BUR_EXT | cut -d" " -f4)
 NAO=$(grep "NAO" $EST_BUR_EXT | cut -d" " -f4)
 NSABE=$(grep "NSABE" $EST_BUR_EXT | cut -d" " -f4)
-PSIM=$(echo "scale=1; $SIM*100 / 46" | bc -l)
-PNAO=$(echo "scale=1; $NAO*100 / 46" | bc -l)
-PNSABE=$(echo "scale=1; $NSABE*100 / 46" | bc -l)
+PSIM=$(echo "scale=${ESCALA}; $SIM*100 / 46" | bc -l)
+PNAO=$(echo "scale=${ESCALA}; $NAO*100 / 46" | bc -l)
+PNSABE=$(echo "scale=${ESCALA}; $NSABE*100 / 46" | bc -l)
 sed -i -e "s/PBUR-EXT-SIM/$PSIM/g" \
 	-e "s/PBUR-EXT-NAO/$PNAO/g" \
 	-e "s/PBUR-EXT-NSABE/$PNSABE/g" $TABELA
@@ -61,9 +61,9 @@ sed -i -e "s/BUR-EXT-SIM/$SIM/g" \
 SIM=$(grep "SIM" $EST_BUR_MASC | cut -d" " -f4)
 NAO=$(grep "NAO" $EST_BUR_MASC | cut -d" " -f4)
 NSABE=$(grep "NSABE" $EST_BUR_MASC | cut -d" " -f4)
-PSIM=$(echo "scale=1; $SIM*100 / 46" | bc -l)
-PNAO=$(echo "scale=1; $NAO*100 / 46" | bc -l)
-PNSABE=$(echo "scale=1; $NSABE*100 / 46" | bc -l)
+PSIM=$(echo "scale=${ESCALA}; $SIM*100 / 46" | bc -l)
+PNAO=$(echo "scale=${ESCALA}; $NAO*100 / 46" | bc -l)
+PNSABE=$(echo "scale=${ESCALA}; $NSABE*100 / 46" | bc -l)
 sed -i -e "s/PBUR-MASC-SIM/$PSIM/g" \
 	-e "s/PBUR-MASC-NAO/$PNAO/g" \
 	-e "s/PBUR-MASC-NSABE/$PNSABE/g" $TABELA
@@ -74,9 +74,9 @@ sed -i -e "s/BUR-MASC-SIM/$SIM/g" \
 SIM=$(grep "SIM" $EST_BUR_HOMO | cut -d" " -f4)
 NAO=$(grep "NAO" $EST_BUR_HOMO | cut -d" " -f4)
 NSABE=$(grep "NSABE" $EST_BUR_HOMO | cut -d" " -f4)
-PSIM=$(echo "scale=1; $SIM*100 / 46" | bc -l)
-PNAO=$(echo "scale=1; $NAO*100 / 46" | bc -l)
-PNSABE=$(echo "scale=1; $NSABE*100 / 46" | bc -l)
+PSIM=$(echo "scale=${ESCALA}; $SIM*100 / 46" | bc -l)
+PNAO=$(echo "scale=${ESCALA}; $NAO*100 / 46" | bc -l)
+PNSABE=$(echo "scale=${ESCALA}; $NSABE*100 / 46" | bc -l)
 sed -i -e "s/PBUR-HOMO-SIM/$PSIM/g" \
 	-e "s/PBUR-HOMO-NAO/$PNAO/g" \
 	-e "s/PBUR-HOMO-NSABE/$PNSABE/g" $TABELA
