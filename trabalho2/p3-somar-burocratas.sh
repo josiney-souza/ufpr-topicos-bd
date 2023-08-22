@@ -30,18 +30,6 @@ do
 	elif echo $VALOR | grep -q ";"
 	then
 		echo "Votaram em mais de uma opcao: $VALOR"
-		if echo $VALOR | grep -q "1"
-		then
-			NSABE=$(( $NSABE + 1 ))
-		fi
-		if echo $VALOR | grep -q "2"
-		then
-			SIM=$(( $SIM + 1 ))
-		fi
-		if echo $VALOR | grep -q "3"
-		then
-			NAO=$(( $NAO + 1 ))
-		fi
 	else
 		echo "Valor \'$VALOR\' invalido"
 	fi
